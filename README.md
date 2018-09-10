@@ -1,1 +1,1 @@
-# commons-dbup
+# dbup-templates
