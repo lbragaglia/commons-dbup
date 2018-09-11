@@ -47,14 +47,14 @@ namespace DbUp.Templates
                 _values.Select(v => new LazySqlScript(GetScriptName(tmpl.Key, v), GetScriptContent(tmpl.Value, v))));
         }
 
-        private static string GetScriptName(string scriptName, string attributeValue)
+        private static string GetScriptName(string scriptName, string value)
         {
-            return scriptName.Replace(".tpl.sql", $".{attributeValue}.sql");
+            return scriptName.Replace(".tpl.sql", $".{value}.sql");
         }
 
-        private Func<string> GetScriptContent(string scriptContent, string attributeValue)
+        private Func<string> GetScriptContent(string scriptContent, string variableValue)
         {
-            return () => scriptContent.Replace(_variable, attributeValue);
+            return () => scriptContent.Replace(_variable, variableValue);
         }
     }
 }

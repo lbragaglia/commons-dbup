@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DbUp.Engine;
-using DbUp.Engine.Preprocessors;
-
-namespace DbUp.Templates
+﻿namespace DbUp.Templates
 {
     public static class UpgradeEngineExtensions
     {
